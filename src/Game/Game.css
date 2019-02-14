@@ -1,0 +1,335 @@
+.heroGame {
+text-align: center;
+height: 200px;
+width: 100%;
+}
+
+
+.dealBox {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.playerName {
+    font-size: 30px;
+}
+
+.cardOuter {
+    width: 100%;
+    height: 300px;
+    font-size: 30px;
+}
+
+.dealerPicks {
+    position: absolute;
+    right: 0;
+    top: 150px;
+    width: 40vw;
+}
+
+.currentCards {
+    width: 100%;
+    text-align: center;
+
+}
+
+.cardFrame {
+    padding: 20px;
+    text-align: center;
+    width:100%;
+    height: calc(100vh - 50px);
+    background: white;
+    color: black;
+}
+
+.whiteCardBox {
+    width: 60%
+}
+
+.cardOutline {
+    position: relative;
+    float: left;
+    margin: 10px;
+    width: 150px;
+    height: 220px;
+}
+
+.cardInner {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background: #fff;
+        -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+        box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+        text-align: center;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        animation-iteration-count: 1;
+        -webkit-animation-iteration-count: 1;
+        animation-name: flip;
+        -moz-animation-name: flip;  
+}
+
+.blackCardInner {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    color: white;
+    background: black;
+    -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 7px rgba(0,0,0,0.3);
+    text-align: center;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    animation-name: flip;
+    -moz-animation-name: flip;  
+}
+
+@keyframes flip {
+	0% {
+		-webkit-transform: rotateY(180deg);
+		-ms-transform:     rotateY(180deg);
+        transform: rotateY(180deg);
+	}
+	100% {
+		-webkit-transform: rotateY(0deg);
+		-ms-transform:     rotateY(0deg);
+        transform: rotateY(0deg);
+	}
+}
+
+.cardFrame-front, .cardFrame-back {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.cardFrame-back {
+    padding-top: 40px;
+    background-color: black;
+    color: white;
+    z-index: 1;
+    font-size: 30px;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+}
+
+.cardFrame-front {
+    padding-top: 10px; 
+    backface-visibility: hidden;
+    z-index: 0;
+}
+
+
+.cardName {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 80px;
+}
+
+.score {
+    position: absolute;
+    top: 70px;
+    right: 150px;
+}
+
+.playerName {
+    position: absolute;
+    top: 12px;
+    right: 40px;
+    font-size: 20px;
+    font-family: 'Roboto Slab', serif;
+    color: white;
+}
+
+.playerPic {
+    width: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+    right: 200px;
+}
+
+.pickButton {
+    margin-top: 30px;
+    color: black;
+    font-family: 'Raleway';
+    font-size: 20px;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 5%;
+    background-color: transparent; 
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+        
+}
+
+.pickButton:hover {
+    cursor: pointer;
+    animation-name: bounce;
+    -moz-animation-name: bounce;
+  }
+
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-10px);
+		-ms-transform:     translateY(-10px);
+		transform:         translateY(-10px)
+	}
+	60% {
+		-webkit-transform: translateY(-5px);
+		-ms-transform:     translateY(-5px);
+		transform:         translateY(-5px)
+	}
+}
+
+@keyframes flip {
+	0% {
+		-webkit-transform: rotateY(180deg);
+		-ms-transform:     rotateY(180deg);
+        transform: rotateY(180deg);
+	}
+	100% {
+		-webkit-transform: rotateY(0deg);
+		-ms-transform:     rotateY(0deg);
+        transform: rotateY(0deg);
+	}
+}
+
+
+.winnerButton {
+    margin-top: 10px;
+    color: black;
+    font-family: 'Raleway';
+    font-size: 20px;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 5%;
+    background-color: transparent; 
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+        
+}
+
+.winnerButton:hover {
+    cursor: pointer;
+    animation-name: bounce;
+    -moz-animation-name: bounce;
+  }
+
+
+  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.game-flip-card {
+    background-color: transparent;
+    width: 30vw;
+    height: 80vh;
+    margin: 20px auto auto auto;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .game-flip-card-inner {
+    border: 3px solid black;
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    animation-name: flip;
+    -moz-animation-name: flip;
+    
+  }
+  
+  
+  /* Position the front and back side */
+  .game-flip-card-front, .game-flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .game-flip-card-front {
+    padding-top: 50px;
+    background-color: white;
+    color: black;
+    z-index: 0;
+  }
+  
+  /* Style the back side */
+  .game-flip-card-back {
+    padding-top: 50px;
+    background-color: white;
+    color: black;
+    z-index: 1;
+    transform: rotateY(180deg);
+  }
+  
+  .game-flip-card-button {
+    margin-top: 10px;
+    color: black;
+    font-size: 20px;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 5%;
+    background-color: transparent; 
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+  
+  .game-flip-card-button:hover {
+    cursor: pointer;
+      animation-name: bounce;
+      -moz-animation-name: bounce;
+  }
